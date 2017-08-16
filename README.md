@@ -62,4 +62,12 @@ if __name__ == '__main__':
 ![Maximun of SA](https://github.com/kjzhang9/pySA/blob/master/SA_max.png  "Maximun")
 ![Minimun of SA](https://github.com/kjzhang9/pySA/blob/master/SA_min.png  "Min")
 
+### Example 2. Using Module simAnneal_TSP
+
+**Just run the example.py, to test reliability , we use Module simAnneal_TSP to find the shortest path. As we know, for this case, circumference is the shortest path.**
+
+The followed figure shows dynamic process:
+
+![TSP of SA](https://github.com/kjzhang9/pySA/blob/master/circle_tsp.gif  "TSP")
+
  
