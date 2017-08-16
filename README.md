@@ -5,9 +5,14 @@ Module：simAnneal_FUNC is used to find the maximun or minimun value
 
 Module: simAnneal_TSP is used to figure out the TSP problem, find the shortest path.
 
-###Example 1. Using Module simAnneal_FUNC 
-**2D function f(x, y)**:  $$ f(x,y) = y\ sin(2 \pi x) + x\cos(2\pi y) $$
-####1.1 Find the maximun value
+### Example 1. Using Module simAnneal_FUNC 
+
+**2D function f(x, y)**:
+
+ $$ f(x,y) = y\ sin(2 \pi x) + x\cos(2\pi y) $$
+ 
+#### 1.1 Find the maximun value
+
 **Step 1. Import modules**
 ```python
 from random import random
@@ -54,4 +59,7 @@ if __name__ == '__main__':
 	plt.savefig('SA_min.png')
 	plt.show()
 ```
- ![Maximun value of f(x,y)](/home/zkj/github/pySA/SA_max.png  "Maximun")
+![Maximun of SA](https://github.com/kjzhang9/pySA/blob/master/SA_max.png  "Maximun")
+![Minimun of SA](https://github.com/kjzhang9/pySA/blob/master/SA_min.png  "Min")
+
+ 
