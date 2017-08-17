@@ -9,7 +9,7 @@ Module: simAnneal_TSP is used to figure out the TSP problem, find the shortest p
 
 **2D function f(x, y)**:
 
- $$ f(x,y) = y\ sin(2 \pi x) + x\cos(2\pi y) $$
+ $$f(x,y) = y\ sin(2 \pi x) + x\cos(2\pi y)$$
  
 #### 1.1 Find the maximun value
 
@@ -70,4 +70,6 @@ The followed figure shows dynamic process:
 
 ![TSP of SA](https://github.com/kjzhang9/pySA/blob/master/circle_tsp.gif  "TSP")
 
+If we randomly set 100 cities, using simAnneal_TSP find the shortest path:
+![TSP2](https://github.com/kjzhang9/pySA/blob/master/random_tsp.gif  "TSP2")
  
