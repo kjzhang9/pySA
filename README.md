@@ -71,5 +71,5 @@ The followed figure shows dynamic process:
 ![TSP of SA](https://github.com/kjzhang9/pySA/blob/master/circle_tsp.gif  "TSP")
 
 If we randomly set 100 cities, using simAnneal_TSP find the shortest path:
-![TSP2](https://github.com/kjzhang9/pySA/blob/master/random_tsp.gif  "TSP2")
+![TSP1](https://github.com/kjzhang9/pySA/blob/master/tsp2.gif "TSP1")
  
