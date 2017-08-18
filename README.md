@@ -9,7 +9,9 @@ Module: simAnneal_TSP is used to figure out the TSP problem, find the shortest p
 
 **2D function f(x, y)**:
 
- $$f(x,y) = y\ sin(2 \pi x) + x\cos(2\pi y)$$
+ $$
+  f(x,y) = y\ sin(2 \pi x) + x\cos(2\pi y)
+ $$
  
 #### 1.1 Find the maximun value
 
