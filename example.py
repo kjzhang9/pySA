@@ -36,15 +36,16 @@ def funTSP(keylist, city_pos):
 	totalLen = np.sum(np.sqrt(np.sum(np.square(queue[:-1]-queue[1:]), axis=1)))
 	return totalLen
 
-if __name__ == '__main__':
-
+#if __name__ == '__main__':
+def run_draw():
 	#init = -sys.maxsize # for maximun case
 	init = sys.maxsize # for minimun case
 	Mar_chain = 1000
 	xyRange = [[-50, 50], [-50, 50]]
 	xRange = [[0, 10]]
-	targ = SimAnneal(target_text='min', Markov_chain=Mar_chain, ValueRange=xyRange, numCity=40)
+	targ = SimAnneal(target_text='min', Markov_chain=Mar_chain, ValueRange=xyRange, numCity=30)
 	city_pos = targ.iniTSPcircle(R=40)
+	#city_pos = targ.iniTSP()
 	t_start = time()
 
 	calculate = OptSolution(temperature0=300, temDelta=0.98, Markov_chain=Mar_chain, result=init, val_nd=[0,0])
@@ -52,13 +53,7 @@ if __name__ == '__main__':
 
 	out = calculate.soulution(output=out, SA_preV=targ.oldTSP, SA_newV=targ.newTSP, SA_juge=targ.juge, 
 							  juge_text='min',city_p=city_pos, func=funTSP)
-	'''
-	for i in range(2, 4):
-		out = calculate.soulution(output=out, SA_preV=targ.upoldTSP, SA_newV=targ.newTSP2,
-								 SA_juge=targ.juge, juge_text='min',city_p=city_pos, 
-								 func=funTSP, iterN=i)
-		print(out)
-	'''
+
 	with open('out1.dat', 'w') as f:
 		for i in range(len(out)):
 			f.write(str(out[i]) + '\n')
@@ -113,6 +108,10 @@ if __name__ == '__main__':
 		return line, length_text
 
 	ani = animation.FuncAnimation(fig, update, range(len(out)), init_func=init, repeat=False, interval=200, blit=True)
-	ani.save('circle_tsp.gif', writer='imagemagick')
+	#ani.save('circle_tsp.gif', writer='imagemagick')
+	ani.save('tsp1.mp4', extra_args=['-vcodec', 'libx264'])
+
 	plt.show()
 	
+if __name__ == '__main__':
+	run_draw()
